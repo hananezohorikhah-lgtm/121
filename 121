@@ -1,0 +1,38 @@
+۲۱_تابع ( ) isSquare را نوشته و آزمایش کنید این تابع تشخیص می دهد که آیا عدد داده شده یک عدد مربعی است یا خیر
+
+int isSquare(int n);
+
+اولین ده عدد مربعی اعداد ۰ و ١ و ٤ و ٥ و ١٦ و ٢٥ و ٣٦ و ٤٩ و ٦٤ و ۸۱ هستند.
+
+پاسخ:
+#include<iostream.h>
+
+int isSquare(int);
+
+int main()
+{
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if(isSquare(n))
+        cout << n << " is a square number." << endl;
+    else
+        cout << n << " is not a square number." << endl;
+
+    return 0;
+}
+
+int isSquare(int n)
+{
+    int i = 0;
+
+    while(i * i < n)
+        i++;
+
+    if(i * i == n)
+        return 1;
+    else
+        return 0;
+}
